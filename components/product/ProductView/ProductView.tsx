@@ -79,11 +79,11 @@ const ProductView: FC<Props> = ({ product }) => {
         <div className={cn(s.productDisplay, 'fit')}>
           <div className={s.nameBox}>
             <h1 className={s.name}>{product.name}</h1>
-            <div className={s.price}>
+            {/* <div className={s.price}>
               {price}
               {` `}
               {product.price?.currencyCode}
-            </div>
+            </div> */}
           </div>
 
           <div className={s.sliderContainer}>
@@ -126,7 +126,8 @@ const ProductView: FC<Props> = ({ product }) => {
                           setChoices((choices) => {
                             return {
                               ...choices,
-                              [opt.displayName.toLowerCase()]: v.label.toLowerCase(),
+                              [opt.displayName.toLowerCase()]:
+                                v.label.toLowerCase(),
                             }
                           })
                         }}
